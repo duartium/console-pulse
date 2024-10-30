@@ -1,0 +1,51 @@
+## .NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/bin/
+**/obj/
+**/project.lock.json
+**/project.fragment.lock.json
+**/artifacts/
+
+## Visual Studio
+.vs/
+.vscode/
+.vscode/*
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vscode/.*
+.vscode/*.*
+.DS_Store
+
+## Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+## MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+## Node.js (if applicable)
+node_modules/

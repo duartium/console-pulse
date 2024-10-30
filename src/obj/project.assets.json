@@ -8,23 +8,23 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\byron.duarte\\.nuget\\packages\\": {},
+    "C:\\Users\\BADM4651\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\github\\console-pulse\\ConsolePulse\\ConsolePulse.csproj",
+      "projectUniqueName": "C:\\source\\console-pulse\\src\\ConsolePulse.csproj",
       "projectName": "ConsolePulse",
-      "projectPath": "E:\\github\\console-pulse\\ConsolePulse\\ConsolePulse.csproj",
-      "packagesPath": "C:\\Users\\byron.duarte\\.nuget\\packages\\",
-      "outputPath": "E:\\github\\console-pulse\\ConsolePulse\\obj\\",
+      "projectPath": "C:\\source\\console-pulse\\src\\ConsolePulse.csproj",
+      "packagesPath": "C:\\Users\\BADM4651\\.nuget\\packages\\",
+      "outputPath": "C:\\source\\console-pulse\\src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\byron.duarte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\BADM4651\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -72,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400-preview.0.24324.5/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
