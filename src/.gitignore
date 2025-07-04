@@ -1,0 +1,117 @@
+# Archivos compilados y ejecutables
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.obj
+*.o
+*.lib
+*.exp
+
+# Directorios de salida de Visual Studio
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+
+# Archivos de configuración de Visual Studio
+*.vcxproj.user
+*.vcxproj.filters
+*.sln.docstates
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Archivos temporales de Visual Studio
+*.tmp
+*.temp
+*.log
+*.cache
+*.pch
+*.idb
+*.tlog
+*.lastbuildstate
+*.unsuccessfulbuild
+
+# Archivos de IntelliSense
+*.VC.db
+*.VC.VC.opendb
+*.VC.opendb
+
+# Archivos de depuración
+*.ilk
+*.meta
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.vspscc
+*.vssscc
+
+# Archivos de MSBuild
+*.binlog
+
+# Archivos de sistema Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Archivos de configuración local
+*.local
+appsettings.local.json
+launchSettings.json
+
+# Archivos de NuGet
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Archivos de herramientas de desarrollo
+.vs/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Archivos de respaldo
+*.bak
+*.backup
+*.orig
+
+# Archivos de profiling
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# Archivos de coverage
+*.coverage
+*.coveragexml
+
+# Archivos de documentación generada
+*.chm
+*.docx
+*.pdf
+
+# Archivos de configuración específicos del proyecto
+config.ini
+settings.conf
+*.config
