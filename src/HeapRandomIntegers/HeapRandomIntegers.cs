@@ -1,4 +1,18 @@
-﻿namespace HeapRandomIntegers;
+//Generate a random list of integers.
+//Show the binary heap tree resulting from inserting the integers on the list one at a time.
+
+using System.Security.Cryptography;
+
+var randomNumbers = MathHelper.GenerateRandomIntegers(10, 1, 100);
+randomNumbers.ForEach(x => Console.WriteLine(x));
+
+MaxHeap maxHeap = new();
+foreach (int number in randomNumbers)
+{
+	maxHeap.Add(number);
+	maxHeap.PrintHeap();
+	Console.WriteLine();
+}
 
 public class MaxHeap
 {
@@ -41,7 +55,7 @@ public class MaxHeap
 	}
 
 	private void HeapifyUp(int index) {
-		while(HasParent(index) 
+		while(HasParent(index)
 			&& _elements[index] > GetParent(index))
 		{
 			int parentIndex = GetParentIndex(index);
@@ -105,4 +119,73 @@ public class MaxHeap
 	}
 
 	#endregion
+}
+
+public class MathHelper
+{
+
+    /// <summary>
+    /// Calculates the least common multiple (LCM) of two integers
+    /// </summary>
+    /// <param name="a"></param>
+    /// <param name="b"></param>
+    /// <returns></returns>
+    public int CalculateLeastCommonMultiple(int a, int b)
+    {
+        //convert to positive numbers
+        a = Math.Abs(a);
+        b = Math.Abs(b);
+
+        int greatestCommonDivisor = CalculateGreatestCommonDivisor(a, b);
+
+        return (a * b) / greatestCommonDivisor;
+    }
+
+    /// <summary>
+    /// Calculates the Greatest Common Divisor (GCD) of two integers
+    /// </summary>
+    /// <param name="a"></param>
+    /// <param name="b"></param>
+    /// <returns></returns>
+    public static int CalculateGreatestCommonDivisor(int a, int b)
+    {
+        while (b != 0) //until reduce
+        {
+            int temp = b;
+            b = a % b; //update res
+            a = temp;
+        }
+        return a;
+    }
+
+	/// <summary>
+    /// Generate an integers number range
+    /// </summary>
+    /// <param name="size"></param>
+    /// <param name="min"></param>
+    /// <param name="max"></param>
+    public static List<uint> GenerateRandomIntegers(uint size, uint min, uint max)
+	{
+		if (min > max)
+            throw new ArgumentException("min cannot be greater than max");
+
+		List<uint> randomNumbers = new List<uint>();
+        var randomBytes = new byte[4];
+
+        while (size > 0) {
+			using (var randomGenerator = RandomNumberGenerator.Create())
+			{
+				randomGenerator.GetBytes(randomBytes);
+				uint randomValue = BitConverter.ToUInt32(randomBytes, 0);
+
+                uint range = max - min + 1;
+                uint randomInRange = (randomValue % range) + min;
+
+				randomNumbers.Add(randomInRange);
+			}
+			size--;
+        }
+
+        return randomNumbers;
+	}
 }

@@ -1,10 +1,20 @@
-﻿using System.Security.Principal;
+/**Consider the following list of integers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].
+Show the binary search tree resulting from inserting the integers in the list.Consider the following list of integers:
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].
+Show the binary search tree resulting from inserting the integers in the list.**/
 
-namespace IntegersBinarySearchTree;
+int[] values = Enumerable.Range(1, 10).ToArray();
+
+var bst = new BinarySearchTree();
+foreach (var value in values)
+	bst.Insert(value);
+
+Console.WriteLine("Binary tree in order:");
+bst.InOrder();
 
 public class BinarySearchTree
 {
-    public Node Root { get; set; }
+    public Node? Root { get; set; }
     public BinarySearchTree()
     {
         Root = null;
@@ -14,7 +24,7 @@ public class BinarySearchTree
         Root = InsertRecursive(Root, value);
     }
 
-    private Node InsertRecursive(Node root, int value)
+    private Node InsertRecursive(Node? root, int value)
     {
         if(root == null)
         {
@@ -35,7 +45,7 @@ public class BinarySearchTree
         InOrderRec(Root);
     }
 
-    private void InOrderRec(Node root)
+    private void InOrderRec(Node? root)
     {
         if(root != null)
         {

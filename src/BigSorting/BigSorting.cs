@@ -1,6 +1,3 @@
-﻿
-using BigSorting;
-
 var input = new string[]
 {
     "000123",
@@ -19,7 +16,7 @@ var input = new string[]
      "1", "3", "10", "3", "5"
 };
 
-static string[] BigSorting(string[] unsorted) 
+static string[] BigSorting(string[] unsorted)
 {
     return unsorted.OrderBy(x => x,
         new BigIntegerStringComparer())
@@ -33,3 +30,21 @@ Console.WriteLine("==========================================");
 Console.WriteLine("ORDERED");
 Console.WriteLine("==========================================");
 Console.WriteLine(string.Join("\n", result));
+
+internal class BigIntegerStringComparer : IComparer<string>
+{
+    public int Compare(string? x, string? y)
+    {
+        if (x == null || y == null)
+        {
+            throw new ArgumentNullException(x == null ? nameof(x) : nameof(y));
+        }
+
+        if (x.Length != y.Length)
+        {
+            return x.Length.CompareTo(y.Length);
+        }
+
+        return string.Compare(x, y, StringComparison.Ordinal);
+    }
+}
